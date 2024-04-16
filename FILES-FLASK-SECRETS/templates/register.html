@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="../static/styles.css" />
+<html>
+  <head>
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Login</h1>
+      <!-- This is where our form will go. -->
+      <form action="{{url_for('register')}}" method="POST">
+        {% block content %}
+        <p>{{message}}</p>
+        {% endblock %}
+        <div>
+          <label for="">first name</label>
+          <input type="text" name="firstname" />
+        </div>
+        <div>
+          <label for="">last name</label>
+          <input type="text" name="lastname" />
+        </div>
+        <div>
+          <label for="">email</label>
+          <input type="email" name="email" />
+        </div>
+        <div>
+          <label for="">password</label>
+          <input type="password" name="password" />
+        </div>
+        <button type="submit">register</button>
+      </form>
+    </div>
+  </body>
+</html>
